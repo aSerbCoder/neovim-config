@@ -1,4 +1,4 @@
-vim.cmd [[colorscheme vim]]
+vim.cmd [[colorscheme nordic]]
 
 vim.opt.guicursor = ""
 vim.opt.conceallevel = 1

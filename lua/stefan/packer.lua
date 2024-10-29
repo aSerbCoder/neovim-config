@@ -10,11 +10,35 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use {'neoclide/coc.nvim', branch = 'release'}
+	-- use {'neoclide/coc.nvim', branch = 'release'}
 
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-    	use {'ojroques/nvim-bufdel'}
+    use {'ojroques/nvim-bufdel'}
+
+    use 'AlexvZyl/nordic.nvim'
+
+    use ('hrsh7th/nvim-cmp')
+    use ('williamboman/mason.nvim')
+    use ('williamboman/mason-lspconfig.nvim')
+
+    use ('neovim/nvim-lspconfig')
+    use ('hrsh7th/cmp-nvim-lsp')
+    use ('hrsh7th/cmp-buffer')
+    use ('hrsh7th/cmp-path')
+    use ('hrsh7th/cmp-cmdline')
+    -- find mason
+
+    use ('L3MON4D3/LuaSnip')
+    use ('saadparwaiz1/cmp_luasnip')
+
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
 
 	use({
 		"epwalsh/obsidian.nvim",
@@ -29,10 +53,10 @@ return require('packer').startup(function(use)
 			require("obsidian").setup({
 				workspaces = {{
 					name = "zettelkasten",
-					path = "~/notes/zettelkasten/",
+					path = "~/workspace/notes/zettelkasten",
 					on_new_note = "ObsidianNew notes",
 				}},
-				new_notes_location = "~/notes/zettelkasten/",
+				new_notes_location = "~/workspace/notes/zettelkasten",
 			})
 		end,
 	})
